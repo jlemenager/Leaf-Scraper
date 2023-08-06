@@ -8,6 +8,10 @@ const fs = require('fs/promises')
 app.use(express.urlencoded({ extended: true}))
 app.use(express.json())
 app.use(cors())
+app.use(cors({
+    origin: 'http://localhost:5173'
+  }));
+//thanks to chatgpt for the cors origin line
 
 let names;
 let h2s;
