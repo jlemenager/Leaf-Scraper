@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1",
+    "puppeteer": "^20.9.0"
+  },
+  "name": "leaf",
+  "description": "![leaflogo2](https://github.com/jlemenager/Leaf/assets/131897602/22783cef-f217-4389-954c-87dfc0b08ec2)",
+  "version": "1.0.0",
+  "main": "scraper.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon scraper.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jlemenager/Leaf.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jlemenager/Leaf/issues"
+  },
+  "homepage": "https://github.com/jlemenager/Leaf#readme"
+}
