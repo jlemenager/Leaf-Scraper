@@ -36,6 +36,13 @@ const FindH1 = async(url) =>{
 
 app.get('/', (req,res) => res.json({ message: 'Server works' }))
 
+app.get('/getinfo', async(req,res) =>{
+    console.log('logging body', req.body)
+    let response = await FindH1(req.body.url)
+    console.log(response)
+    res.send(response)
+})
+
 app.post('/getinfo', async(req,res) =>{
     console.log('logging body', req.body)
     let response = await FindH1(req.body.url)
