@@ -3,7 +3,6 @@ const PORT = process.env.PORT || 4000
 const app = express()
 const cors = require('cors')
 const puppeteer = require('puppeteer')
-const fs = require('fs/promises')
 
 app.use(express.urlencoded({ extended: true}))
 app.use(express.json())
@@ -35,6 +34,7 @@ const FindH1 = async(url) =>{
 
 }
 
+app.get('/', (req,res) => res.json({ message: 'Server works' }))
 
 app.post('/getinfo', async(req,res) =>{
     console.log('logging body', req.body)
