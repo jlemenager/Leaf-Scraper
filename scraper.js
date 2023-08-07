@@ -1,5 +1,5 @@
 const express = require('express')
-const PORT = 4000
+const PORT = process.env.PORT || 4000
 const app = express()
 const cors = require('cors')
 const puppeteer = require('puppeteer')
@@ -8,9 +8,10 @@ const fs = require('fs/promises')
 app.use(express.urlencoded({ extended: true}))
 app.use(express.json())
 app.use(cors())
-app.use(cors({
-    origin: 'http://localhost:5173'
-  }));
+// app.use(cors({
+//     origin: 'http://localhost:5173'
+//   }));
+app.use('/static', express.static('assets'))
 //thanks to chatgpt for the cors origin line
 
 let names;
